@@ -1,7 +1,6 @@
 # Playwright Auth 🚀
 
-
-Simple login automation project built with Python, Playwright, and Pytest.
+Simple UI login automation project built with Python, Playwright, and Pytest.
 
 ## Tech Stack
 
@@ -12,6 +11,10 @@ Simple login automation project built with Python, Playwright, and Pytest.
 ## Features
 
 - Positive Login Test
+- Invalid Username Test
+- Invalid Password Test
+- Empty Credentials Test
+- Logout Test
 - Page Object Model (POM)
 - Pytest Fixtures
 
@@ -20,10 +23,13 @@ Simple login automation project built with Python, Playwright, and Pytest.
 ```text
 playwright-auth/
 ├── pages/
+│   └── login_page.py
 ├── tests/
+│   └── test_login.py
 ├── conftest.py
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ## Run
