@@ -32,6 +32,12 @@ playwright-auth/
 └── .gitignore
 ```
 
+## Test Website
+
+Tests are written against the Practice Test Automation login page:
+
+https://practicetestautomation.com/practice-test-login/
+
 ## Run
 
 ```bash
