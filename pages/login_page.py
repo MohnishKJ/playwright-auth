@@ -11,8 +11,14 @@ class LoginPage:
         self.page.fill("#password", password)
         self.page.click("#submit")
 
-    def get_error_message(self):
-        return self.page.locator("#error").text_content()
-    
     def logout(self):
         self.page.get_by_role("link", name="Log out").click()
+
+    def get_error_message(self):
+        return self.page.locator("#error").text_content()
+
+    def get_success_message(self):
+        return self.page.locator(".post-title").text_content()
+
+    def is_logout_visible(self):
+        return self.page.get_by_role("link", name="Log out").is_visible()

@@ -13,6 +13,8 @@ def test_valid_login(page):
     )
 
     assert "logged-in-successfully" in page.url
+    assert login_page.get_success_message() == "Logged In Successfully"
+    assert login_page.is_logout_visible()
 
 
 def test_invalid_username(page):
@@ -28,18 +30,6 @@ def test_invalid_username(page):
 
     assert login_page.get_error_message() == "Your username is invalid!"
 
-def test_empty_credentials(page):
-
-    login_page = LoginPage(page)
-
-    login_page.open()
-
-    login_page.login(
-        "",
-        ""
-    )
-
-    assert login_page.get_error_message() == "Your username is invalid!"
 
 def test_invalid_password(page):
 
@@ -53,6 +43,21 @@ def test_invalid_password(page):
     )
 
     assert login_page.get_error_message() == "Your password is invalid!"
+
+
+def test_empty_credentials(page):
+
+    login_page = LoginPage(page)
+
+    login_page.open()
+
+    login_page.login(
+        "",
+        ""
+    )
+
+    assert login_page.get_error_message() == "Your username is invalid!"
+
 
 def test_logout(page):
 
