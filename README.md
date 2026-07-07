@@ -17,6 +17,8 @@ Simple UI login automation project built with Python, Playwright, and Pytest.
 - Logout Test
 - Page Object Model (POM)
 - Pytest Fixtures
+- HTML Test Reports
+- Pytest Configuration
 
 ## Project Structure
 
@@ -24,9 +26,12 @@ Simple UI login automation project built with Python, Playwright, and Pytest.
 playwright-auth/
 ├── pages/
 │   └── login_page.py
+├── reports/
+├── screenshots/
 ├── tests/
 │   └── test_login.py
 ├── conftest.py
+├── pytest.ini
 ├── requirements.txt
 ├── README.md
 └── .gitignore
@@ -41,5 +46,11 @@ https://practicetestautomation.com/practice-test-login/
 ## Run
 
 ```bash
-python -m pytest -v
+python -m pytest
+```
+
+## Generate HTML Report
+
+```bash
+python -m pytest --html=reports/report.html --self-contained-html
 ```
