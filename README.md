@@ -1,24 +1,24 @@
 # Playwright Auth 🚀
 
-Simple UI login automation project built with Python, Playwright, and Pytest.
+A simple UI login automation project built with **Python**, **Playwright**, and **Pytest** using the **Page Object Model (POM)**.
 
 ## Tech Stack
 
-- Python
-- Playwright
-- Pytest
+* Python
+* Playwright
+* Pytest
 
 ## Features
 
-- Positive Login Test
-- Invalid Username Test
-- Invalid Password Test
-- Empty Credentials Test
-- Logout Test
-- Page Object Model (POM)
-- Pytest Fixtures
-- HTML Test Reports
-- Pytest Configuration
+* ✅ Positive Login Test
+* ✅ Invalid Username Test
+* ✅ Invalid Password Test
+* ✅ Empty Credentials Test
+* ✅ Logout Test
+* ✅ Page Object Model (POM)
+* ✅ Pytest Fixtures
+* ✅ HTML Test Reports
+* ✅ Pytest Configuration
 
 ## Project Structure
 
@@ -39,11 +39,17 @@ playwright-auth/
 
 ## Test Website
 
-Tests are written against the Practice Test Automation login page:
+The tests are written against the Practice Test Automation login page:
 
 https://practicetestautomation.com/practice-test-login/
 
-## Run
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Run Tests
 
 ```bash
 python -m pytest
